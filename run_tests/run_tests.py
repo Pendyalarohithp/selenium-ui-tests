@@ -1,7 +1,7 @@
 import unittest
 
 loader = unittest.TestLoader()
-tests = loader.discover('tests')
-testRunner = unittest.TextTestRunner()
-testRunner.run(tests)
-#
+suite = loader.discover('run_tests')  # ← change from 'tests' to 'run_tests'
+
+runner = unittest.TextTestRunner()
+runner.run(suite)
